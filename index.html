@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREMIOO</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Livraria gremista</h1>
+        <div class="header-actions">
+            <a href="cart.html" id="cart-toggle">Carrinho (<span id="cart-count">0</span>)</a>
+            <button id="theme-toggle">Modo Escuro</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="book-grid">
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=1" alt="Capa do livro">
+                <h3>Dom Quixote</h3>
+                <p>Miguel de Cervantes</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="Dom Quixote" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=2" alt="Capa do livro">
+                <h3>1984</h3>
+                <p>George Orwell</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="1984" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=3" alt="Capa do livro">
+                <h3>O Pequeno Príncipe</h3>
+                <p>Antoine de Saint-Exupéry</p>
+                <p class="price">R$ 29,90</p>
+                <button class="add-to-cart" data-title="O Pequeno Príncipe" data-price="29.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=4" alt="Capa do livro">
+                <h3>Cem Anos de Solidão</h3>
+                <p>Gabriel García Márquez</p>
+                <p class="price">R$ 59,90</p>
+                <button class="add-to-cart" data-title="Cem Anos de Solidão" data-price="59.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=5" alt="Capa do livro">
+                <h3>Orgulho e Preconceito</h3>
+                <p>Jane Austen</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="Orgulho e Preconceito" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=6" alt="Capa do livro">
+                <h3>O Senhor dos Anéis</h3>
+                <p>J.R.R. Tolkien</p>
+                <p class="price">R$ 79,90</p>
+                <button class="add-to-cart" data-title="O Senhor dos Anéis" data-price="79.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=7" alt="Capa do livro">
+                <h3>Crime e Castigo</h3>
+                <p>Fiódor Dostoiévski</p>
+                <p class="price">R$ 54,90</p>
+                <button class="add-to-cart" data-title="Crime e Castigo" data-price="54.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=8" alt="Capa do livro">
+                <h3>Harry Potter e a Pedra Filosofal</h3>
+                <p>J.K. Rowling</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="Harry Potter e a Pedra Filosofal" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=9" alt="Capa do livro">
+                <h3>A Revolução dos Bichos</h3>
+                <p>George Orwell</p>
+                <p class="price">R$ 34,90</p>
+                <button class="add-to-cart" data-title="A Revolução dos Bichos" data-price="34.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=10" alt="Capa do livro">
+                <h3>O Apanhador no Campo de Centeio</h3>
+                <p>J.D. Salinger</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="O Apanhador no Campo de Centeio" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=11" alt="Capa do livro">
+                <h3>Moby Dick</h3>
+                <p>Herman Melville</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="Moby Dick" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=12" alt="Capa do livro">
+                <h3>Guerra e Paz</h3>
+                <p>Liev Tolstói</p>
+                <p class="price">R$ 69,90</p>
+                <button class="add-to-cart" data-title="Guerra e Paz" data-price="69.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=13" alt="Capa do livro">
+                <h3>O Grande Gatsby</h3>
+                <p>F. Scott Fitzgerald</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="O Grande Gatsby" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=14" alt="Capa do livro">
+                <h3>Frankenstein</h3>
+                <p>Mary Shelley</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="Frankenstein" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=15" alt="Capa do livro">
+                <h3>Drácula</h3>
+                <p>Bram Stoker</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="Drácula" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=16" alt="Capa do livro">
+                <h3>As Crônicas de Nárnia</h3>
+                <p>C.S. Lewis</p>
+                <p class="price">R$ 59,90</p>
+                <button class="add-to-cart" data-title="As Crônicas de Nárnia" data-price="59.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=17" alt="Capa do livro">
+                <h3>O Hobbit</h3>
+                <p>J.R.R. Tolkien</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="O Hobbit" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=18" alt="Capa do livro">
+                <h3>Admirável Mundo Novo</h3>
+                <p>Aldous Huxley</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="Admirável Mundo Novo" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=19" alt="Capa do livro">
+                <h3>Memórias Póstumas de Brás Cubas</h3>
+                <p>Machado de Assis</p>
+                <p class="price">R$ 34,90</p>
+                <button class="add-to-cart" data-title="Memórias Póstumas de Brás Cubas" data-price="34.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=20" alt="Capa do livro">
+                <h3>Dom Casmurro</h3>
+                <p>Machado de Assis</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="Dom Casmurro" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=21" alt="Capa do livro">
+                <h3>A Metamorfose</h3>
+                <p>Franz Kafka</p>
+                <p class="price">R$ 29,90</p>
+                <button class="add-to-cart" data-title="A Metamorfose" data-price="29.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=22" alt="Capa do livro">
+                <h3>O Processo</h3>
+                <p>Franz Kafka</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="O Processo" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=23" alt="Capa do livro">
+                <h3>Vidas Secas</h3>
+                <p>Graciliano Ramos</p>
+                <p class="price">R$ 34,90</p>
+                <button class="add-to-cart" data-title="Vidas Secas" data-price="34.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=24" alt="Capa do livro">
+                <h3>Capitães da Areia</h3>
+                <p>Jorge Amado</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="Capitães da Areia" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=25" alt="Capa do livro">
+                <h3>Gabriela, Cravo e Canela</h3>
+                <p>Jorge Amado</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="Gabriela, Cravo e Canela" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=26" alt="Capa do livro">
+                <h3>Ensaio sobre a Cegueira</h3>
+                <p>José Saramago</p>
+                <p class="price">R$ 54,90</p>
+                <button class="add-to-cart" data-title="Ensaio sobre a Cegueira" data-price="54.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=27" alt="Capa do livro">
+                <h3>O Evangelho Segundo Jesus Cristo</h3>
+                <p>José Saramago</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="O Evangelho Segundo Jesus Cristo" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=28" alt="Capa do livro">
+                <h3>Sapiens: Uma Breve História da Humanidade</h3>
+                <p>Yuval Noah Harari</p>
+                <p class="price">R$ 59,90</p>
+                <button class="add-to-cart" data-title="Sapiens: Uma Breve História da Humanidade" data-price="59.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=29" alt="Capa do livro">
+                <h3>Homo Deus</h3>
+                <p>Yuval Noah Harari</p>
+                <p class="price">R$ 54,90</p>
+                <button class="add-to-cart" data-title="Homo Deus" data-price="54.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=30" alt="Capa do livro">
+                <h3>O Poder do Hábito</h3>
+                <p>Charles Duhigg</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="O Poder do Hábito" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=31" alt="Capa do livro">
+                <h3>Pensar, Depressa e Devagar</h3>
+                <p>Daniel Kahneman</p>
+                <p class="price">R$ 59,90</p>
+                <button class="add-to-cart" data-title="Pensar, Depressa e Devagar" data-price="59.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=32" alt="Capa do livro">
+                <h3>Factfulness</h3>
+                <p>Hans Rosling</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="Factfulness" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=33" alt="Capa do livro">
+                <h3>O Sol é para Todos</h3>
+                <p>Harper Lee</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="O Sol é para Todos" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=34" alt="Capa do livro">
+                <h3>Os Miseráveis</h3>
+                <p>Victor Hugo</p>
+                <p class="price">R$ 69,90</p>
+                <button class="add-to-cart" data-title="Os Miseráveis" data-price="69.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=35" alt="Capa do livro">
+                <h3>O Conde de Monte Cristo</h3>
+                <p>Alexandre Dumas</p>
+                <p class="price">R$ 59,90</p>
+                <button class="add-to-cart" data-title="O Conde de Monte Cristo" data-price="59.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=36" alt="Capa do livro">
+                <h3>Anna Kariênina</h3>
+                <p>Liev Tolstói</p>
+                <p class="price">R$ 64,90</p>
+                <button class="add-to-cart" data-title="Anna Kariênina" data-price="64.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=37" alt="Capa do livro">
+                <h3>Jogo de Tronos</h3>
+                <p>George R.R. Martin</p>
+                <p class="price">R$ 79,90</p>
+                <button class="add-to-cart" data-title="Jogo de Tronos" data-price="79.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=38" alt="Capa do livro">
+                <h3>Duna</h3>
+                <p>Frank Herbert</p>
+                <p class="price">R$ 54,90</p>
+                <button class="add-to-cart" data-title="Duna" data-price="54.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=39" alt="Capa do livro">
+                <h3>Neuromancer</h3>
+                <p>William Gibson</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="Neuromancer" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=40" alt="Capa do livro">
+                <h3>Fahrenheit 451</h3>
+                <p>Ray Bradbury</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="Fahrenheit 451" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=41" alt="Capa do livro">
+                <h3>O Guia do Mochileiro das Galáxias</h3>
+                <p>Douglas Adams</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="O Guia do Mochileiro das Galáxias" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=42" alt="Capa do livro">
+                <h3>Eu, Robô</h3>
+                <p>Isaac Asimov</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="Eu, Robô" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=43" alt="Capa do livro">
+                <h3>Fundação</h3>
+                <p>Isaac Asimov</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="Fundação" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=44" alt="Capa do livro">
+                <h3>Watchmen</h3>
+                <p>Alan Moore</p>
+                <p class="price">R$ 59,90</p>
+                <button class="add-to-cart" data-title="Watchmen" data-price="59.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=45" alt="Capa do livro">
+                <h3>V de Vingança</h3>
+                <p>Alan Moore</p>
+                <p class="price">R$ 54,90</p>
+                <button class="add-to-cart" data-title="V de Vingança" data-price="54.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=46" alt="Capa do livro">
+                <h3>O Iluminado</h3>
+                <p>Stephen King</p>
+                <p class="price">R$ 49,90</p>
+                <button class="add-to-cart" data-title="O Iluminado" data-price="49.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=47" alt="Capa do livro">
+                <h3>It: A Coisa</h3>
+                <p>Stephen King</p>
+                <p class="price">R$ 69,90</p>
+                <button class="add-to-cart" data-title="It: A Coisa" data-price="69.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=48" alt="Capa do livro">
+                <h3>A Culpa é das Estrelas</h3>
+                <p>John Green</p>
+                <p class="price">R$ 39,90</p>
+                <button class="add-to-cart" data-title="A Culpa é das Estrelas" data-price="39.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=49" alt="Capa do livro">
+                <h3>Comer, Rezar, Amar</h3>
+                <p>Elizabeth Gilbert</p>
+                <p class="price">R$ 44,90</p>
+                <button class="add-to-cart" data-title="Comer, Rezar, Amar" data-price="44.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="book-card">
+                <img src="https://picsum.photos/200/300?random=50" alt="Capa do livro">
+                <h3>O Alquimista</h3>
+                <p>Paulo Coelho</p>
+                <p class="price">R$ 34,90</p>
+                <button class="add-to-cart" data-title="O Alquimista" data-price="34.90">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 iCHIGO gremista</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
