@@ -112,42 +112,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Finalizar compra com mensagem e imagem
+    // Finalizar compra com modal e tema dinâmico
     if (checkoutButton) {
         checkoutButton.addEventListener('click', () => {
             if (cart.length === 0) {
                 alert('O carrinho está vazio!');
             } else {
                 const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
-                // Cria um elemento de confirmação
+                // Cria o modal de confirmação
                 const confirmation = document.createElement('div');
                 confirmation.className = 'confirmation-modal';
                 confirmation.innerHTML = `
                     <div class="confirmation-content">
                         <img src="imagens/compra-confirmada.jpg" alt="Confirmação de Compra">
-                        <p>Compra finalizada com sucesso! Total: R$ ${total}</p>
+                        <p>Compra efetuada com sucesso!</p>
                         <button id="close-confirmation">Fechar</button>
                     </div>
                 `;
                 document.body.appendChild(confirmation);
 
-                // Estiliza o modal (adicione ao estilo.css ou aqui temporariamente)
+                // Aplica o tema atual ao modal
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                confirmation.style.backgroundColor = isDarkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)';
+                confirmation.querySelector('.confirmation-content').style.backgroundColor = isDarkMode ? '#333' : '#fff';
+                confirmation.querySelector('.confirmation-content').style.color = isDarkMode ? '#fff' : '#000';
+                confirmation.querySelector('.confirmation-content button').style.backgroundColor = isDarkMode ? '#45a049' : '#4CAF50';
+                confirmation.querySelector('.confirmation-content button').style.color = '#fff';
+
+                // Estilização básica
                 confirmation.style.position = 'fixed';
                 confirmation.style.top = '0';
                 confirmation.style.left = '0';
                 confirmation.style.width = '100%';
                 confirmation.style.height = '100%';
-                confirmation.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
                 confirmation.style.display = 'flex';
                 confirmation.style.justifyContent = 'center';
                 confirmation.style.alignItems = 'center';
                 confirmation.style.zIndex = '1000';
 
-                confirmation.querySelector('.confirmation-content').style.backgroundColor = 'white';
                 confirmation.querySelector('.confirmation-content').style.padding = '20px';
                 confirmation.querySelector('.confirmation-content').style.borderRadius = '5px';
+                confirmation.querySelector('.confirmation-content').style.textAlign = 'center';
                 confirmation.querySelector('.confirmation-content img').style.width = '100px';
                 confirmation.querySelector('.confirmation-content img').style.height = '100px';
+                confirmation.querySelector('.confirmation-content p').style.margin = '10px 0';
 
                 // Fecha o modal
                 document.getElementById('close-confirmation').addEventListener('click', () => {
@@ -192,4 +200,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualiza o carrinho na inicialização
     updateCart();
 });
-
