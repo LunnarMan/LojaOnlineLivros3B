@@ -247,4 +247,60 @@ footer {
     .book-card img {
         height: 120px;
     }
+
+}
+/* Estilos existentes... */
+.confirmation-modal {
+    display: none; /* Controlado pelo JavaScript */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.confirmation-content {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.confirmation-content img {
+    width: 100px;
+    height: 100px;
+}
+
+.confirmation-content p {
+    margin: 10px 0;
+}
+
+.confirmation-content button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.confirmation-content button:hover {
+    background-color: #45a049;
+}
+
+/* Tema escuro */
+.dark-mode .confirmation-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .confirmation-content {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .confirmation-content button {
+    background-color: #45a049;
 }
