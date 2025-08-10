@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adicionar livro ao carrinho
     if (document.querySelector('.add-to-cart')) {
         const buttons = document.querySelectorAll('.add-to-cart');
-        console.log(`Botões encontrados: ${buttons.length}`); // Depuração
+        console.log(`Botões encontrados: ${buttons.length}`);
         buttons.forEach(button => {
             button.addEventListener('click', () => {
                 const title = button.getAttribute('data-title');
@@ -112,15 +112,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Finalizar compra
+    // Finalizar compra com mensagem e imagem
     if (checkoutButton) {
         checkoutButton.addEventListener('click', () => {
             if (cart.length === 0) {
                 alert('O carrinho está vazio!');
             } else {
-                alert('Compra finalizada com sucesso! Total: R$ ' + cart.reduce((sum, item) => sum + item.price, 0).toFixed(2));
-                cart.length = 0;
-                updateCart();
+                const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+                // Cria um elemento de confirmação
+                const confirmation = document.createElement('div');
+                confirmation.className = 'confirmation-modal';
+                confirmation.innerHTML = `
+                    <div class="confirmation-content">
+                        <img src="imagens/compra-confirmada.jpg" alt="Confirmação de Compra">
+                        <p>Compra finalizada com sucesso! Total: R$ ${total}</p>
+                        <button id="close-confirmation">Fechar</button>
+                    </div>
+                `;
+                document.body.appendChild(confirmation);
+
+                // Estiliza o modal (adicione ao estilo.css ou aqui temporariamente)
+                confirmation.style.position = 'fixed';
+                confirmation.style.top = '0';
+                confirmation.style.left = '0';
+                confirmation.style.width = '100%';
+                confirmation.style.height = '100%';
+                confirmation.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                confirmation.style.display = 'flex';
+                confirmation.style.justifyContent = 'center';
+                confirmation.style.alignItems = 'center';
+                confirmation.style.zIndex = '1000';
+
+                confirmation.querySelector('.confirmation-content').style.backgroundColor = 'white';
+                confirmation.querySelector('.confirmation-content').style.padding = '20px';
+                confirmation.querySelector('.confirmation-content').style.borderRadius = '5px';
+                confirmation.querySelector('.confirmation-content img').style.width = '100px';
+                confirmation.querySelector('.confirmation-content img').style.height = '100px';
+
+                // Fecha o modal
+                document.getElementById('close-confirmation').addEventListener('click', () => {
+                    document.body.removeChild(confirmation);
+                    cart.length = 0;
+                    updateCart();
+                });
             }
         });
     }
@@ -158,3 +192,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualiza o carrinho na inicialização
     updateCart();
 });
+
